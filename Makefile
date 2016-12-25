@@ -1,7 +1,8 @@
 
 NAME = fillit
 
-SRC = main.c
+SRC = fillit.c \
+		err.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
