@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpierre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 13:28:45 by cpierre           #+#    #+#             */
-/*   Updated: 2016/12/23 14:46:51 by cpierre          ###   ########.fr       */
+/*   Created: 2016/12/23 14:14:17 by cpierre           #+#    #+#             */
+/*   Updated: 2016/12/23 15:15:47 by cpierre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILLIT_H
-# define FILLIT_H
+#include "fillit.h"
 
-# include "libft.h"
-# define ERR_USAGE "usage: fillit tested_file\n"
-
-#endif
+int	main(int argc, char **argv)
+{
+	if (argc != 2)
+		write(1, ERR_USAGE, ft_strlen(ERR_USAGE));
+	else
+		write(1, argv[1], ft_strlen(argv[1]));
+	return (0);
+}
